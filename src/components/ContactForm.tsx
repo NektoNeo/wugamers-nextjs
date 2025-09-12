@@ -47,8 +47,26 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contacts" className="py-20 bg-white">
-      <div className="container-width">
+    <section id="contacts" className="py-20 bg-gradient-to-br from-white via-gray-50/30 to-white relative overflow-hidden">
+      {/* Animated gradient orbs */}
+      <motion.div 
+        className="absolute top-1/3 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.05, 0.08, 0.05]
+        }}
+        transition={{ duration: 10, repeat: Infinity }}
+      />
+      <motion.div 
+        className="absolute bottom-1/3 right-0 w-96 h-96 bg-accent-400/5 rounded-full blur-3xl"
+        animate={{ 
+          scale: [1, 1.3, 1],
+          opacity: [0.05, 0.08, 0.05]
+        }}
+        transition={{ duration: 12, repeat: Infinity }}
+      />
+      
+      <div className="container-width relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,8 +74,10 @@ export default function ContactForm() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-display-sm md:text-display-md font-display font-bold text-gray-900 mb-4">
-            Свяжитесь с нами
+          <h2 className="text-display-sm md:text-display-md font-display font-bold mb-4">
+            <span className="bg-gradient-to-r from-primary-500 to-accent-400 bg-clip-text text-transparent">
+              Свяжитесь с нами
+            </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Есть вопросы или предложения? Мы всегда рады общению
@@ -70,7 +90,7 @@ export default function ContactForm() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-turquoise-50 to-white rounded-3xl p-8 md:p-12 border border-turquoise-100"
+            className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200/50 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300"
           >
             {isSubmitted ? (
               <motion.div
@@ -78,7 +98,7 @@ export default function ContactForm() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="text-center py-12"
               >
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-primary-500 to-accent-400 flex items-center justify-center">
                   <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -100,7 +120,7 @@ export default function ContactForm() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 transition-all duration-300"
                       placeholder="Ваше имя"
                     />
                   </div>
@@ -116,7 +136,7 @@ export default function ContactForm() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 transition-all duration-300"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -133,7 +153,7 @@ export default function ContactForm() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 transition-all duration-300"
                       placeholder="+7 (999) 999-99-99"
                     />
                   </div>
@@ -147,7 +167,7 @@ export default function ContactForm() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 transition-all duration-300"
                     >
                       <option value="">Выберите тему</option>
                       <option value="partnership">Партнёрство</option>
@@ -185,11 +205,11 @@ export default function ContactForm() {
                     disabled={isSubmitting}
                     className={cn(
                       "inline-flex items-center justify-center",
-                      "rounded-full bg-gradient-to-r from-primary to-accent",
-                      "px-8 py-3 text-base font-semibold text-white",
-                      "shadow-lg hover:shadow-xl transition-all duration-300",
-                      "hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed",
-                      "disabled:hover:scale-100"
+                      "bg-gradient-to-r from-primary-500 to-primary-600",
+                      "px-8 py-4 rounded-xl font-semibold text-white",
+                      "hover:from-primary-600 hover:to-primary-700 transition-all duration-300",
+                      "transform hover:scale-[1.02] hover:shadow-lg hover:shadow-primary-500/25",
+                      "disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                     )}
                   >
                     {isSubmitting ? (

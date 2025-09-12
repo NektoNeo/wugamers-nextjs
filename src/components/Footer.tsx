@@ -7,13 +7,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-gray-50 to-white border-t border-gray-100">
+    <footer className="bg-gradient-to-b from-gray-50/50 via-white to-gray-50/30 border-t border-gray-200/50">
       <div className="container-width py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <span className="font-display text-2xl font-extrabold gradient-text">
+              <span className="font-display text-2xl font-extrabold bg-gradient-to-r from-primary-500 to-accent-400 bg-clip-text text-transparent">
                 WU GAMERS
               </span>
             </div>
@@ -26,7 +26,7 @@ export default function Footer() {
                 href={social.telegram.channel}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white border border-gray-200 hover:border-accent hover:text-accent transition-colors duration-300"
+                className="p-2 rounded-lg bg-white border border-gray-200 hover:border-primary-500 hover:text-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10"
                 aria-label="Telegram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ export default function Footer() {
                 href={social.vk}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white border border-gray-200 hover:border-accent hover:text-accent transition-colors duration-300"
+                className="p-2 rounded-lg bg-white border border-gray-200 hover:border-primary-500 hover:text-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10"
                 aria-label="VKontakte"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ export default function Footer() {
                 href={social.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white border border-gray-200 hover:border-accent hover:text-accent transition-colors duration-300"
+                className="p-2 rounded-lg bg-white border border-gray-200 hover:border-primary-500 hover:text-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10"
                 aria-label="YouTube"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ export default function Footer() {
                 href={social.rutube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white border border-gray-200 hover:border-accent hover:text-accent transition-colors duration-300"
+                className="p-2 rounded-lg bg-white border border-gray-200 hover:border-primary-500 hover:text-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10"
                 aria-label="Rutube"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -74,27 +74,27 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900 mb-4">Навигация</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#events" className="text-gray-600 hover:text-primary transition-colors duration-200">
+                <Link href="/#events" className="text-gray-600 hover:text-primary-500 transition-colors duration-200">
                   Мероприятия
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="text-gray-600 hover:text-primary transition-colors duration-200">
+                <Link href="/#about" className="text-gray-600 hover:text-primary-500 transition-colors duration-200">
                   О проекте
                 </Link>
               </li>
               <li>
-                <Link href="#team" className="text-gray-600 hover:text-primary transition-colors duration-200">
+                <Link href="/#team" className="text-gray-600 hover:text-primary-500 transition-colors duration-200">
                   Команда
                 </Link>
               </li>
               <li>
-                <Link href="#partners" className="text-gray-600 hover:text-primary transition-colors duration-200">
+                <Link href="/#partners" className="text-gray-600 hover:text-primary-500 transition-colors duration-200">
                   Партнёры
                 </Link>
               </li>
               <li>
-                <Link href="#contacts" className="text-gray-600 hover:text-primary transition-colors duration-200">
+                <Link href="/#contacts" className="text-gray-600 hover:text-primary-500 transition-colors duration-200">
                   Контакты
                 </Link>
               </li>
@@ -106,23 +106,23 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900 mb-4">Контакты</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-primary-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href={`mailto:${contacts.email}`} className="text-gray-600 hover:text-primary transition-colors duration-200">
+                <a href={`mailto:${contacts.email}`} className="text-gray-600 hover:text-primary-500 transition-colors duration-200">
                   {contacts.email}
                 </a>
               </li>
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-primary-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href={`tel:${contacts.phone.replace(/\s/g, '')}`} className="text-gray-600 hover:text-primary transition-colors duration-200">
+                <a href={`tel:${contacts.phone.replace(/\s/g, '')}`} className="text-gray-600 hover:text-primary-500 transition-colors duration-200">
                   {contacts.phone}
                 </a>
               </li>
               <li className="flex items-start">
-                <svg className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-primary-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
                 <div className="text-gray-600">
@@ -141,10 +141,10 @@ export default function Footer() {
               © {currentYear} АНО «Уникальный мир». Все права защищены.
             </p>
             <div className="flex gap-6">
-              <Link href="/privacy" className="text-sm text-gray-500 hover:text-primary transition-colors duration-200">
+              <Link href="/privacy" className="text-sm text-gray-500 hover:text-primary-500 transition-colors duration-200">
                 Политика конфиденциальности
               </Link>
-              <Link href="/terms" className="text-sm text-gray-500 hover:text-primary transition-colors duration-200">
+              <Link href="/terms" className="text-sm text-gray-500 hover:text-primary-500 transition-colors duration-200">
                 Пользовательское соглашение
               </Link>
             </div>
