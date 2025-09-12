@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Events from '@/components/Events';
 import About from '@/components/About';
+import Roadmap from '@/components/Roadmap';
 import Team from '@/components/Team';
 import Partners from '@/components/Partners';
 import DonationWidget from '@/components/DonationWidget';
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Events />
         <About />
+        <Roadmap />
         <Team />
         <Partners />
         <DonationWidget />

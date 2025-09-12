@@ -24,7 +24,7 @@ export default function Header() {
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
               <div className="relative">
                 <img 
-                  src="/Logo.svg" 
+                  src="/logo.svg" 
                   alt="WU GAMERS Logo" 
                   className="h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
                   style={{ 
