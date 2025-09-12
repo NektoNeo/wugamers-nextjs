@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Logo from './Logo';
 import { cn } from '@/lib/utils';
 
 const navigation = [
@@ -23,15 +24,7 @@ export default function Header() {
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
               <div className="relative">
-                <img 
-                  src="/logo.svg" 
-                  alt="WU GAMERS Logo" 
-                  className="h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
-                  style={{ 
-                    filter: 'hue-rotate(270deg) saturate(1.6) brightness(1.3) contrast(1.1)',
-                    dropShadow: '0 2px 8px rgba(124, 109, 241, 0.3)'
-                  }}
-                />
+                <Logo className="h-10 w-auto transition-all duration-300 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-primary-400/25 rounded-full blur-lg scale-150 opacity-0 group-hover:opacity-100 transition-all duration-300" />
               </div>
               <span className="heading-primary text-xl font-extrabold gradient-text-primary hidden sm:block group-hover:gradient-text-electric transition-all duration-300">
